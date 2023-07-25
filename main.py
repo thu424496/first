@@ -11,6 +11,11 @@ def selectionSort(arr):
             arr[i], arr[minIndex] = arr[minIndex], arr[i]
     return arr
 
+def swap(arr,i,j):
+    arr[i] = arr[i]^arr[j]
+    arr[j] = arr[i]^arr[j]
+    arr[i] = arr[i]^arr[j]
+
 
 ## sort
 def partition(arr,low,high): 
