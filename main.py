@@ -51,5 +51,22 @@ arr = [10, 7, 8, 9, 1, 5]
 n = len(arr) 
 quickSort(arr,0,n-1) 
 print ("排序后的数组:") 
+
 for i in range(n): 
     print ("%d" %arr[i]),
+
+
+# 堆
+
+def heapify(arr,index,head_index):
+    left = index*2+1
+    while left<head_index:
+        # 从左右子节点选出最大者
+        largest =left+1 if arr[left]<arr[left+1] && left+1<head_index else left
+        # 将最大子节点和父节点比较
+        largest = index if arr[largest]<arr[index] else largest
+        if largest==index:
+            break
+        swap(arr,index,largest)
+        index = largest
+        left = index*2+1
