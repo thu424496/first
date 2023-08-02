@@ -57,6 +57,8 @@ for i in range(n):
 
 
 # 堆
+def heapinsert(arr,data):
+    pass
 
 def heapify(arr,index,head_index):
     left = index*2+1
