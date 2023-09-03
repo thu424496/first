@@ -18,6 +18,7 @@ def swap(arr,i,j):
 
 
 ## sort
+# 这里有点问题，未考虑多个相同值的情况
 def partition(arr,low,high): 
     i = ( low-1 )         # 最小元素索引
     pivot = arr[high]     
